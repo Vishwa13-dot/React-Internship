@@ -1,39 +1,36 @@
-import Gallery from "../components/Gallery.jsx";
+import Gallery from "../components/Gallery";
+import { useNavigate } from "react-router-dom";
+
 
 function Home() {
+   const navigate = useNavigate();
+
   return (
     <div className="container">
 
-      <div className="hero">
-        <img
-          src="https://images.unsplash.com/photo-1604654894610-df63bc536371"
-          alt="Nail Art"
-        />
-      </div>
+      <section className="hero-section">
 
-      <div className="about-section">
-        <div className="about-box">
-          <h2>V Polish & Co.</h2>
+        <div className="hero-content">
+          <span className="tagline">✨ Premium Nail Studio</span>
+
+          <h1>Luxury Nail Art <br />& Beauty Care</h1>
+
+          <p>Life is too short for boring nails. 💅</p>
+
+          <p>Welcome to V Polish & Co., where creativity meets beauty.We specialize in premium nail care and custom nail designs.</p>
+
+          <button className="book-btn" onClick={() => navigate("/contact")}>Book Appointment</button>
         </div>
 
-        <div className="about-content">
-          <p>
-            Life is too short for boring nails. 💅
-          </p>
+  <div className="hero-image">
+    <img
+      src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=1200"
+      alt="Nail Art"
+    />
+  </div>
 
-          <p>
-            Welcome to V Polish & Co., where creativity meets beauty. We
-            specialize in premium nail care, trendy nail art, gel extensions,
-            and customized designs that match your unique style.
-          </p>
+</section>
 
-          <p>
-            Whether you love elegant minimal looks or bold statement nails,
-            our goal is to help you feel confident, stylish, and beautiful
-            with every appointment.
-          </p>
-        </div>
-      </div>
       <Gallery />
 
     </div>

@@ -90,7 +90,6 @@ body{
 /* Pages */
 .page{
   padding:60px;
-  min-height:70vh;
 }
 
 .page h1{

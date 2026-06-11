@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import nailDesigns from "../data/nailData";
+import nailDesigns from "../Data/nailData";
 
 function ProductDetails() {
   const { id } = useParams();
@@ -8,8 +8,13 @@ function ProductDetails() {
     (item) => item.id === id
   );
 
+  if (!product) {
+    return <h1>Product Not Found</h1>;
+  }
+
   return (
     <div className="page">
+
       <h1>{product.title}</h1>
 
       <div className="details-gallery">
@@ -21,6 +26,7 @@ function ProductDetails() {
           />
         ))}
       </div>
+
     </div>
   );
 }
